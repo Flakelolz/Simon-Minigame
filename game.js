@@ -28,7 +28,7 @@ function nextSequence() {
 function playSound(name) {
     let audio = new Audio(`sounds/${name}.mp3`);
     audio.play();
-    audio.volume = 0.2;
+    audio.volume = 0.05;
 }
 
 // Logic that lets the game know which color has been clicked
@@ -74,9 +74,11 @@ function checkAnswer(currentLevel) {
             }, 200);
 
             $("#level-title").text("Game Over");
-            $(document).keypress(function (e) {
-                startOver();
-            });
+            gameStarted = false;
+            //Used to restart the game when you pressed a key on your keyboard
+            // $(document).keypress(function (e) {
+            //     startOver();
+            // });
         }
     }
 }
