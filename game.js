@@ -22,8 +22,6 @@ function nextSequence() {
     gameStarted = true;
 
     userClickedPattern.length = 0;
-
-    console.log(gamePattern);
 }
 
 //Plays sound files
@@ -41,8 +39,6 @@ $(".btn").click(function (e) {
     animatePress(userChosenColour);
 
     checkAnswer(userClickedPattern.length - 1);
-
-    console.log(userClickedPattern);
 });
 
 // Animating buttons by adding and removing a CSS class after a delay
@@ -56,7 +52,6 @@ function animatePress(currentColor) {
 // Compares the array of the player's clicks against the main game array
 function checkAnswer(currentLevel) {
     if (userClickedPattern[currentLevel] === gamePattern[currentLevel]) {
-        console.log("success");
 
         if (userClickedPattern.length === gamePattern.length) {
             timeoutReset = setTimeout(function () {
@@ -69,7 +64,6 @@ function checkAnswer(currentLevel) {
             }
         }
     } else {
-        console.log("wrong");
         if (gameStarted) {
             playSound("wrong");
 
