@@ -1,5 +1,7 @@
 # Simon-Minigame
 
+This mini game is an exercice from the Full Stack Developer Course by Angela Yu. I wanted to expand the functionality to practice more. Also learning how to use github.
+
 ## How to play
 
 You'll have to memorize and follow the pattern dictated by the blinking buttons. 
