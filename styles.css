@@ -1,0 +1,170 @@
+body {
+  text-align: center;
+  background-color: #011F3F;
+}
+
+#level-title {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 3rem;
+  margin: 3%;
+  color: #FEF2BF;
+}
+
+.container {
+  display: block;
+  margin: auto;
+
+}
+
+.btn {
+  margin: 25px;
+  display: inline-block;
+  height: 200px;
+  width: 200px;
+  border: 10px solid black;
+  border-radius: 20%;
+}
+
+
+
+.game-over {
+  background-color: red;
+  opacity: 0.8;
+}
+
+#red {
+  background-color: red;
+}
+
+#green {
+  background-color: green;
+}
+
+#blue {
+  background-color: blue;
+}
+
+#yellow {
+  background-color: yellow;
+}
+
+#purple {
+  background-color: purple;
+}
+
+#cyan {
+  background-color: cyan;
+}
+
+.pressed {
+  box-shadow: 0 0 25px white;
+  border-color: white;
+}
+
+.ui-button {
+  padding: .5rem .5rem;
+  width: 8rem;
+}
+
+.difficulty {
+  background-color: #3e8db1;
+  font-family: 'Press Start 2P', cursive;
+  color: #FEF2BF;
+  border: #FEF2BF 3px solid;
+  border-radius: .5rem;
+  margin: 2rem;
+}
+
+.start {
+  display: inline-block;
+  font-family: 'Press Start 2P', cursive;
+  padding: 1rem;
+  margin: 2rem;
+  border-radius: .5rem;
+  border: #3e8db1 3px solid;
+  color: #3e8db1;
+  background-color: #ffca7a;
+}
+
+.restart {
+
+  font-family: 'Press Start 2P', cursive;
+  border-radius: .5rem;
+  border: #3e8db1 3px solid;
+  color: #3e8db1;
+  background-color: #ffca7a;
+}
+
+
+
+.hidden {
+  visibility: hidden;
+}
+
+.display-none {
+  display: none;
+}
+
+@media (width <=905px) {
+  #level-title {
+    font-size: 2rem;
+  }
+
+  .btn {
+    margin: 15px;
+    height: 150px;
+    width: 150px;
+    border: 7px solid black;
+  }
+
+  .ui-button {
+    margin: 5px;
+    font-size: .8rem;
+  }
+}
+
+@media (width <=605px) {
+  #level-title {
+    font-size: 1.5rem;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+  }
+
+  .btn {
+    margin: 15px;
+    height: 100px;
+    width: 100px;
+    border: 5px solid black;
+  }
+
+  .ui-button {
+    display: flex;
+    /* flex-direction: column;
+    align-items: center;
+    justify-content: center; */
+    margin-bottom: 2rem;
+    font-size: .6rem;
+  }
+}
+
+@media (width <=443px) {
+  #level-title {
+    font-size: 1rem;
+  }
+
+  .btn {
+    margin: 5px;
+    height: 75px;
+    width: 75px;
+    border: 5px solid black;
+  }
+
+  .ui-button {
+    margin: 5px;
+    font-size: .5rem;
+  }
+}
