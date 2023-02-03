@@ -28,6 +28,7 @@ function nextSequence() {
 function playSound(name) {
     let audio = new Audio(`sounds/${name}.mp3`);
     audio.play();
+    audio.volume = 0.2;
 }
 
 // Logic that lets the game know which color has been clicked
