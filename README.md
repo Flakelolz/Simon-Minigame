@@ -16,8 +16,7 @@ Added multiple difficulties by adding more buttons:
 - Extreme: 6 Buttons
 - Insane: 6 Buttons + randomized locations after each level
 
-![chrome_E7H8oa0ozs](https://user-images.githubusercontent.com/41105999/216519703-8feeb834-bf63-4f09-9740-d603a2d9e728.png)
-
+![chrome_9z4Wcl7kpA](https://user-images.githubusercontent.com/41105999/216519862-816b1dd3-fed9-4d50-881d-1315224f46cb.png)
 
 ## How to play
 
