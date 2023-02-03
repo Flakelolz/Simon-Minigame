@@ -20,7 +20,7 @@ Added multiple difficulties by adding more buttons:
 - Normal: 4 Buttons
 - Hard: 5 Buttons
 - Extreme: 6 Buttons
-- Insane: 6 Buttons + randomized locations after each level
+- Insane: 6 Buttons + randomized button location after each level
 
 ![chrome_9z4Wcl7kpA](https://user-images.githubusercontent.com/41105999/216519862-816b1dd3-fed9-4d50-881d-1315224f46cb.png)
 
