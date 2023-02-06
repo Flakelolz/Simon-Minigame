@@ -9,6 +9,8 @@ let difficulty = "normal";
 let numberOfButtons = 4;
 let timeoutReset;
 
+// TODO when you press START show a countdown
+
 // Main logic for the game loop
 function nextSequence() {
     $("#level-title").text(`Level ${level++}`);
@@ -16,19 +18,45 @@ function nextSequence() {
     let randomChosenColour = buttonColors[randomNumber];
     gamePattern.push(randomChosenColour);
 
-    $(`#${randomChosenColour}`).fadeIn(100).fadeOut(100).fadeIn(100);
-    playSound(randomChosenColour);
-
     gameStarted = true;
 
     userClickedPattern.length = 0;
+
+    console.log(gamePattern);
+
+    if ($("#show")[0].checked) {
+        showPattern(gamePattern);
+    } else {
+        $(`#${randomChosenColour}`).fadeIn(100).fadeOut(100).fadeIn(100);
+        playSound(randomChosenColour);
+    }
+}
+
+// Displays all the steps on the gamePattern instead of the last one each time.
+async function showPattern(gamePattern) {
+    for (i = 0; i < gamePattern.length; i++) {
+        await showingPattern(gamePattern, i, 0.4);
+    }
+}
+// In conjunction with showPattern function, show all the steps on the gamePattern
+function showingPattern(patternArray, index, seconds) {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            $(`#${patternArray[index]}`).fadeIn(100).fadeOut(100).fadeIn(100);
+            playSound(patternArray[index]);
+            resolve();
+        }, seconds * 1000);
+    });
 }
 
 //Plays sound files
 function playSound(name) {
     let audio = new Audio(`sounds/${name}.mp3`);
-    audio.play();
-    audio.volume = 0.05;
+    return new Promise((res) => {
+        audio.play();
+        audio.volume = 0.05;
+        audio.onended = res;
+    });
 }
 
 // Logic that lets the game know which color has been clicked
@@ -53,7 +81,6 @@ function animatePress(currentColor) {
 // Compares the array of the player's clicks against the main game array
 function checkAnswer(currentLevel) {
     if (userClickedPattern[currentLevel] === gamePattern[currentLevel]) {
-
         if (userClickedPattern.length === gamePattern.length) {
             timeoutReset = setTimeout(function () {
                 nextSequence();
