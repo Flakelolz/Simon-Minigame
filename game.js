@@ -22,10 +22,8 @@ function nextSequence() {
 
     userClickedPattern.length = 0;
 
-    console.log(gamePattern);
-
     if ($("#show")[0].checked) {
-        showPattern(gamePattern);
+        showPattern();
     } else {
         $(`#${randomChosenColour}`).fadeIn(100).fadeOut(100).fadeIn(100);
         playSound(randomChosenColour);
@@ -33,7 +31,7 @@ function nextSequence() {
 }
 
 // Displays all the steps on the gamePattern instead of the last one each time.
-async function showPattern(gamePattern) {
+async function showPattern() {
     for (i = 0; i < gamePattern.length; i++) {
         await showingPattern(gamePattern, i, 0.4);
     }
