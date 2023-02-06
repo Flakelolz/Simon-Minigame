@@ -52,11 +52,8 @@ function showingPattern(patternArray, index, seconds) {
 //Plays sound files
 function playSound(name) {
     let audio = new Audio(`sounds/${name}.mp3`);
-    return new Promise((res) => {
         audio.play();
         audio.volume = 0.05;
-        audio.onended = res;
-    });
 }
 
 // Logic that lets the game know which color has been clicked
