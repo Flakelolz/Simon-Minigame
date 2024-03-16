@@ -1,4 +1,5 @@
 # Simon-Minigame
+[Play Online](https://flakelolz.github.io/Simon-Minigame/)
 
 This mini game is an exercice from the Full Stack Developer Course by Angela Yu. I wanted to expand the functionality to practice more. Also learning how to use github.
 
